@@ -7,9 +7,14 @@ typedef struct {
   int classes;
 } Character;
 
-void warriorAttack(Character* character, Character* target);
-void mageAttack(Character* character, Character* target1, Character* target2, Character* target3);
+Character Warrior = {"Warrior", 2, 12, 12, 0, 1};
+
+Character Mage = {"Mage", 2, 8, 8, 0, 2};
+
+Character Cleric = {"Cleric", 2, 10, 10, 0, 3};
+
+void warriorAttack(Character* character, Enemy* target);
+void mageAttack(Character* character, Enemy* target1, Enemy* target2, Enemy* target3);
 void heal(Character* character);
-void takeDamage(Character* character, int amount);
-void verifyClass(Character* character);
-void rollDex(Character* character);
+void doDamage(Character* character, int amount);
+int isCharacterAlive(Character* character);
